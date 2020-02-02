@@ -5,6 +5,7 @@
 2. keymapフォルダに適当なkeymap.cその他を入れる
 3. .envファイルを作る
 4. `docker-compose up`で立ち上げる
+5. 不思議な力でhexフォルダ内にhexファイルが生成される
 
 ## .envファイル
 
