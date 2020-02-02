@@ -5,9 +5,8 @@ services:
     build: .
     stdin_open: true
     volumes:
-      - ./keymap/.:/qmk_firmware/keyboards/${KEYBOARD}/keymaps/awesome/.
+      - ./keymap/.:/qmk_firmware/keyboards/${KEYBOARD}/keymaps/awesome/
       - ./hex/:/qmk_firmware/hex/
     environment:
-      - KEYBOARD=otaku_split/rev1
-      - KEYBOARD_HEX=otaku_split_rev1
-      - KEYMAP=awesome
+      - KEYBOARD=${KEYBOARD}
+      - KEYMAP=${KEYMAP}
