@@ -13,8 +13,7 @@ jobs:
       - uses: actions/checkout@2
 
       - name: compose-run
-        shell: branches
-        env: 
+        shell: bash
         run: |
           docker-compose up -d
           docker-compose exec -T app bash build.sh
