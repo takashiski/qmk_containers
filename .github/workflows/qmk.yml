@@ -1,0 +1,24 @@
+name: QMK
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build: 
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@2
+
+      - name: compose-run
+        shell: branches
+        env: 
+        run: |
+          docker-compose up -d
+          docker-compose exec -T app bash build.sh
+      - uses: actions/upload-artifact@2
+        with:
+          name: awesome_keymap.hex
+          path: ./.build/awesome_keymap.hex
