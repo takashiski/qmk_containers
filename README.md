@@ -1,7 +1,6 @@
 # つかいかた
 
 0. dockerを入れる
-1. hexフォルダとkeymapフォルダをこのフォルダの中にそれぞれ作る
 2. keymapフォルダに適当なkeymap.cその他を入れる
 3. .envファイルを作る
 4. `docker-compose up`で立ち上げる
